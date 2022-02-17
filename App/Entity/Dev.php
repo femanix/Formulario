@@ -6,26 +6,24 @@ use \App\Db\Database;
 
 use \PDO;
 
-class Dev{
+class Dev
+{
     public $nome;
     public $email;
     public $devweb;
-    public $senioridade; 
+    public $senioridade;
     public $id;
 
-    public function cadastrar(){
+    public function cadastrar()
+    {
         $objDatabase = new Database();
-       
+
         $this->id = $objDatabase->insert([
-                                            'nome' => $this->nome,
-                                            'email'=> $this->email,
-                                            'habilidade' => $this->devweb,
-                                            'senioridade' => $this->senioridade
-                                            
+            'nome' => $this->nome,
+            'email' => $this->email,
+            'habilidade' => $this->devweb,
+            'senioridade' => $this->senioridade
+
         ]);
-        
-        
     }
-
 };
-
