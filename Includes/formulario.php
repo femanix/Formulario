@@ -7,10 +7,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
         <!-- CSS -->
-        <link rel="stylesheet" type="text/css" href="formulario.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="../Formulario/Includes/formulario.css" media="screen">
 
         <!-- Título da página (aparece na aba) -->
         <title>Cadastro</title>
+        
     </head>
 
     <body>  
@@ -23,7 +24,7 @@
         </div>
 
         <!-- Início do formulário -->
-        <form>
+        <form method="post">
 
             <fieldset class="grupo">
                 <!-- Campo do nome com legenda "nome" e css de classe "campo" -->
@@ -62,7 +63,7 @@
             <!-- Campo de senioridade com 3 opções para escolha (select option) e css de classe "campo" -->
             <div class="campo">
                 <label for="senioridade"><strong>Senioridade</strong></label>
-                <select id="senioridade" required>
+                <select id="senioridade" name="senioridade" required>
                   <option selected disabled value="">Selecione</option>
                   <option>Júnior</option>
                   <option>Pleno</option>
@@ -99,7 +100,7 @@
             </div>
 
             <!-- Botão para enviar o formulário -->
-            <button class="botao" type="submit" onsubmit="">Concluído</button>            
+            <button class="botao" type="submit" >Concluído</button>            
 
         </form>
 
