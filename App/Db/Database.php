@@ -55,4 +55,12 @@ class Database
 
         return $this->con->lastInsertId();
     }
+
+    public function select($where = null, $order = null, $limit = null){
+        $where = strlen($where) ? 'WHERE '.$where : '';
+        $order = strlen($order) ? 'ORDER BY '.$order : '';
+        $limit = strlen($limit) ? 'WHERE '.$limit : '';
+
+        $query = 'SELECT '.$fields.' FROM '.$this->table.' '.$where.' '.$order. ' '.$limit;
+    }
 };

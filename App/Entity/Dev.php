@@ -26,4 +26,9 @@ class Dev
 
         ]);
     }
+
+    public static function getDevs($where = null, $order = null, $limit = null){
+        
+        return (new Database())->select($where,$order,$limit)->fetchAll(PDO::FETCH_CLASS,self::class);
+    }
 };
